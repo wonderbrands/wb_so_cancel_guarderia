@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Odoo
+*.pyc
+*.log
+filestore/
+.odoorc
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
