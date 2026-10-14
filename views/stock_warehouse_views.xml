@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_warehouse_wb_cancel" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.wb.cancel</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='warehouse_config']/group" position="inside">
+                <group string="Cancelaciones de venta" name="wb_cancel_group"
+                       invisible="delivery_steps != 'pick_pack_ship'">
+                    <field name="wb_cancel_location_id"/>
+                    <field name="wb_cancel_picking_type_id"/>
+                    <field name="wb_cancel_include_pack_zone"/>
+                    <field name="wb_cancel_include_picked"/>
+                    <field name="wb_cancel_auto_validate"/>
+                    <button name="action_wb_setup_cancel_flow" type="object"
+                            string="Configurar flujo de cancelación" class="btn-secondary"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
